@@ -1,7 +1,7 @@
 IntList seeds;
 void setup()
 {
-  size(500, 500);
+  size(1080, 1920);
   seeds = new IntList();
   seeds.append(0);
 }
@@ -16,8 +16,8 @@ void draw()
     noised(seed, c, 2*seed);
   }
   if(frameCount % 12 == 0 && frameCount < width) seeds.append(frameCount);
-  saveFrame("instagram/frame-####.png");
-  if(frameCount == 1100) exit();
+  saveFrame("tiktok/frame-####.png");
+  if(frameCount == width) exit();
 }
 
 void noised(int seed, color c, float y0)
